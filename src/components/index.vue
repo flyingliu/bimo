@@ -1,35 +1,42 @@
 <template>
     <div class="main index" id="index" :title="msg">
-        <div class="scroll">
-            <img class="img" :src="img"/>
+        <div class="scroll" :class="{isLock:isLock}" :style="styleObject">
         </div>
     </div>
 </template>
 <script>
 var myScroll;
+import $ from "jquery"
+import list from "../assets/data.js"
 export default {
     data() {
         return {
             msg: "this flying",
-            img:''
+            img: '',
+            styleObject: { backgroundImage:"" },
+            isLock: true
+        }
+    },
+    methods: {
+        getSize(callback) {
+            var img = new Image();
+            var wrap = $(".scroll");
+            img.src = this.img;
+            img.onload = () => {
+                var value = img.naturalWidth/img.naturalHeight > wrap.width()/wrap.height();
+                this.isLock = !value;
+            }
         }
     },
 
     mounted() {
-        this.img = "http://ww1.sinaimg.cn/large/006poVAQgy1fitscuifcjj318g0m8gpl.jpg";
-        var imgData = new Image(this.img);
-        imgData.src = this.img
-        imgData.onload = (abc) => {
-            console.log(abc);
-        }
-        console.log(this);
-        myScroll = new IScroll('#index', {
-            zoom: true,
-            scrollX: true,
-            scrollY: true,
-            mouseWheel: true,
-            wheelAction: 'zoom'
-        });
+        console.log(list.list)
+        var item = list.list[1];
+        this.img =  item.img;
+        this.styleObject.backgroundImage = "url(" + this.img + ")";
+        this.getSize();
+
+
     }
 }
 </script>

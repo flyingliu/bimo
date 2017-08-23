@@ -1,20 +1,22 @@
 <template>
   <div id="app">
     <header>
+      <i class="logo iconfont icon-imagevectordefuben"></i>
+
       <nav>
         <li>
-          <router-link :to="{name:'list'}" class="btn">list</router-link>
+          <router-link :to="{name:'index'}" class="btn">首页</router-link>
         </li>
         <li>
-          <router-link :to="{name:'index'}" class="btn">index</router-link>
+          <router-link :to="{name:'list'}" class="btn">列表</router-link>
         </li>
         <li>
-          <router-link :to="{name:'about'}" class="btn">about</router-link>
+          <router-link :to="{name:'about'}" class="btn">关于</router-link>
         </li>
       </nav>
     </header>
     <router-view></router-view>
-    <footer>Copyright © 2017 All rights reserved.</footer>
+    <footer><p>Copyright © 2017 All rights reserved.</p> </footer>
   </div>
 </template>
 
@@ -27,6 +29,7 @@ export default {
   }
 }
 </script>
+
 
 <style lang="scss">
 // @import "./assets/iconfont/iconfont.css";

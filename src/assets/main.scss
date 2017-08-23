@@ -1,21 +1,110 @@
-html,body { padding:0;margin:0; height: 100%; background: #000;}
+$bg: #c7c2af;
+$c:#c50709;
 
-#app { height: 100%;
-    >header { height: 60px; background: #000; overflow: hidden;
-        nav {
-            li { display: inline-block;}
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background: $bg;
+    color:#000;
+    font-size:14px;
+}
+a { text-decoration: none;color:#000;
+    &:hover { color:$c;}
+}
+
+#app {
+    height: 100%;
+    >header {
+        height: 70px;
+        background: url(./assets/bg.jpg);
+        overflow: hidden;
+        position: absolute;
+        top:0;
+        width:100%;
+        z-index: 9;
+        border-bottom:10px solid #666;
+        i.logo {
+            position: absolute;
+            font-size:48px;
+            top:11px;
+            left:20px;
+            color:$c;
         }
-    
+        nav {
+            text-align: right;
+            padding:0 20px;
+
+            li {
+                display: inline-block; 
+                position: relative;
+                a { display: block;font:14px/48px arial;padding:11px;}
+                &:hover {
+                    color:$c;
+                    &:after {width:30px; height: 4px; background: $c;border-radius:2px;
+                        content: '';
+                        position: absolute;bottom:14px;
+                        left:0;right:0;
+                        margin:auto;
+
+                    }
+                }
+            }
+        }
     }
-    >.main { height: calc(100% - 120px);background: #333;}
-    >footer { height: 60px; background: #000;}
+    >.main {
+        height: calc(100% - 180px);
+        position: absolute;
+        top:80px;
+        padding:10px 0;
+        background: #fff;
+        width:100%;
+    }
+    >footer {
+        height: 70px;
+        background: url(./assets/bg.jpg);
+        position: absolute;
+        bottom:0;
+        width:100%;
+        z-index: 9;
+        border-top:10px solid #666;
+        p { margin:0; padding:11px;font:10px/48px arial;}
+    }
+}
+.index {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    .scroll {
+        height: 100%;
+        width: 100%;
+        background: url("./assets/bg.jpg") no-repeat center 0;
+        background-color: #fff;
+        background-size: auto 100%;
+        animation: panoramic 30s linear infinite alternate;
+        animation-play-state: paused;
+        &:hover,
+        &:focus {
+            animation-play-state: running;
+        }
+        &.isLock {
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+    }
 }
 
-.index { overflow: hidden; width:100%;height:100%;
-    .scroll {}
-    img {min-height: 100%; display: block;}
+
+@keyframes panoramic {
+	to { background-position: 100% 0; }
 }
+
+
 
 @for $i from 1 to 7 {
-    h#{$i} { margin:0;}
+    h#{$i} {
+        margin: 0;
+    }
 }
