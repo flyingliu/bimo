@@ -1,0 +1,16 @@
+html,body { padding:0;margin:0; height: 100%; background: #000;}
+
+#app { height: 100%;
+    >header { height: 60px; background: #000; overflow: hidden;
+        nav {
+            li { display: inline-block;}
+        }
+    
+    }
+    >.main { height: calc(100% - 120px);background: #333;}
+    >footer { height: 60px; background: #000;}
+}
+
+@for $i from 1 to 7 {
+    h#{$i} { margin:0;}
+}
