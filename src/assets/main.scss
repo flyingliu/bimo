@@ -17,14 +17,14 @@ a { text-decoration: none;color:#000;
 #app {
     height: 100%;
     >header {
-        height: 70px;
+        height: 75px;
         background: url(./assets/bg.jpg);
         overflow: hidden;
         position: absolute;
         top:0;
         width:100%;
         z-index: 9;
-        border-bottom:10px solid #666;
+        border-bottom:5px solid #666;
         i.logo {
             position: absolute;
             font-size:48px;
@@ -42,11 +42,12 @@ a { text-decoration: none;color:#000;
                 a { display: block;font:14px/48px arial;padding:11px;}
                 &:hover {
                     color:$c;
-                    &:after {width:30px; height: 4px; background: $c;border-radius:2px;
+                    &:after {width:20px; height: 4px; background: $c;border-radius:2px;
                         content: '';
                         position: absolute;bottom:14px;
                         left:0;right:0;
                         margin:auto;
+                        pointer-events: none;
 
                     }
                 }
@@ -62,13 +63,13 @@ a { text-decoration: none;color:#000;
         width:100%;
     }
     >footer {
-        height: 70px;
+        height: 75px;
         background: url(./assets/bg.jpg);
         position: absolute;
         bottom:0;
         width:100%;
         z-index: 9;
-        border-top:10px solid #666;
+        border-top:5px solid #666;
         p { margin:0; padding:11px;font:10px/48px arial;}
     }
 }
