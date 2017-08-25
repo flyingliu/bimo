@@ -8,6 +8,7 @@
 var myScroll;
 import $ from "jquery"
 import list from "../assets/data.js"
+import _,{random} from "underscore"
 export default {
     data() {
         return {
@@ -30,13 +31,13 @@ export default {
     },
 
     mounted() {
-        console.log(list.list)
-        var item = list.list[1];
+        var photos = list.list;
+        var r = _.random(0,photos.length-1) ;
+        console.log(r);
+        var item = photos[r];
         this.img =  item.img;
         this.styleObject.backgroundImage = "url(" + this.img + ")";
         this.getSize();
-
-
     }
 }
 </script>

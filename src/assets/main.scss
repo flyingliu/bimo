@@ -1,4 +1,4 @@
-$bg: #c7c2af;
+$bg: #fff;
 $c:#c50709;
 
 html,
@@ -14,21 +14,38 @@ a { text-decoration: none;color:#000;
     &:hover { color:$c;}
 }
 
+ul,
+li,
+dl,
+dd,
+dt {
+    padding: 0;
+    margin:0;
+    list-style: none;
+}
+
+@for $i from 1 to 7 {
+    h#{$i} {
+        margin: 0;
+    }
+}
+
 #app {
     height: 100%;
     >header {
-        height: 75px;
-        background: url(./assets/bg.jpg);
+        height:80px;
         overflow: hidden;
         position: absolute;
         top:0;
         width:100%;
         z-index: 9;
-        border-bottom:5px solid #666;
+        border-bottom:1px solid #ccc;
+        box-sizing: border-box;
+        
         i.logo {
             position: absolute;
             font-size:48px;
-            top:11px;
+            top:14px;
             left:20px;
             color:$c;
         }
@@ -39,15 +56,25 @@ a { text-decoration: none;color:#000;
             li {
                 display: inline-block; 
                 position: relative;
-                a { display: block;font:14px/48px arial;padding:11px;}
+                a { display: block;font:14px/40px arial;padding:20px;}
+                &:after {
+                    width: 0px;
+                    height: 4px;
+                    background: $c;
+                    border-radius: 2px;
+                    content: '';
+                    transition: all .2s ease-in .01s;
+                    position: absolute;
+                    bottom: 14px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    pointer-events: none;
+                }
                 &:hover {
                     color:$c;
-                    &:after {width:20px; height: 4px; background: $c;border-radius:2px;
-                        content: '';
-                        position: absolute;bottom:14px;
-                        left:0;right:0;
-                        margin:auto;
-                        pointer-events: none;
+                    &:after {
+                        width: 20px;
 
                     }
                 }
@@ -63,14 +90,15 @@ a { text-decoration: none;color:#000;
         width:100%;
     }
     >footer {
-        height: 75px;
-        background: url(./assets/bg.jpg);
+        height: 80px;
+        // background: url(./assets/bg.jpg);
         position: absolute;
+        box-sizing: border-box;
         bottom:0;
         width:100%;
         z-index: 9;
-        border-top:5px solid #666;
-        p { margin:0; padding:11px;font:10px/48px arial;}
+        border-top:1px solid #ccc;
+        p { margin:0; padding:11px;font:10px/48px arial; color:#ccc;}
     }
 }
 .index {
@@ -97,15 +125,65 @@ a { text-decoration: none;color:#000;
     }
 }
 
+.photos {
+    padding: 10px 0 0 72px;
+    margin:0 20px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    &:after {
+        width:0%;
+        height: 4px;
+        content: '';
+        background: #ccc;
+        position: relative;
+        display: block;
+    }
+    &:hover {
+        &:after {
+            width:100%;
+            transition: all .5s ease-in .01s;
+        }
+
+    }
+    
+    li {
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+        border:1px solid #ccc;
+        font-size:0;
+        margin:0 10px 10px 0;
+        &:first-child {
+            position: absolute;
+            left:0px;
+            top:15px;
+            border:0;
+            i {
+                font-size:48px;
+                width:48px;
+                height: 48px;
+                position: absolute;
+                color:#ccc;
+            }
+        }
+        img {
+            width: 72px;
+            height: 72px;
+            object-fit: cover;
+            display: block;
+        }
+    }
+}
+
+h1 {
+    font: 16px/2 arial;
+    padding: 20px 20px;
+
+}
+
 
 @keyframes panoramic {
 	to { background-position: 100% 0; }
 }
 
 
-
-@for $i from 1 to 7 {
-    h#{$i} {
-        margin: 0;
-    }
-}
