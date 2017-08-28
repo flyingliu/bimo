@@ -55,6 +55,24 @@ export default {
       img: 'http://ov61aed6n.bkt.clouddn.com/17-8-24/49113851.jpg',
       text: '书山有路勤为径，学海无涯苦作舟',
       thumb: "http://ov61aed6n.bkt.clouddn.com/17-8-24/33704287.jpg"
+    }, {
+      type: '草书',
+      time: '2017.07.3',
+      img: 'http://ov61aed6n.bkt.clouddn.com/17-8-27/12240440.jpg',
+      text: '松下问童子，言师采药去，只在此山中，云深不知处。',
+      thumb: "http://ov61aed6n.bkt.clouddn.com/17-8-27/17917049.jpg"
+    }, {
+      type: '草书',
+      time: '2017.08.21',
+      img: 'http://ov61aed6n.bkt.clouddn.com/17-8-27/12240440.jpg',
+      text: '白日依山尽，黄河入海流，欲穷千里目，更上一层楼',
+      thumb: "http://ov61aed6n.bkt.clouddn.com/17-8-27/47013203.jpg"
+    }, {
+      type: '草书',
+      time: '2017.08.21',
+      img: 'http://ov61aed6n.bkt.clouddn.com/17-8-27/44515734.jpg',
+      text: '锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦',
+      thumb: "http://ov61aed6n.bkt.clouddn.com/17-8-27/71975634.jpg"
     }
 
   ]

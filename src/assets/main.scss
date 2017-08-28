@@ -1,17 +1,21 @@
 $bg: #fff;
 $c:#c50709;
-
 html,
 body {
     padding: 0;
     margin: 0;
     height: 100%;
     background: $bg;
-    color:#000;
-    font-size:14px;
+    color: #000;
+    font-size: 14px;
 }
-a { text-decoration: none;color:#000;
-    &:hover { color:$c;}
+
+a {
+    text-decoration: none;
+    color: #000;
+    &:hover {
+        color: $c;
+    }
 }
 
 ul,
@@ -20,7 +24,7 @@ dl,
 dd,
 dt {
     padding: 0;
-    margin:0;
+    margin: 0;
     list-style: none;
 }
 
@@ -33,30 +37,41 @@ dt {
 #app {
     height: 100%;
     >header {
-        height:80px;
+        height: 80px;
         overflow: hidden;
         position: absolute;
-        top:0;
-        width:100%;
+        top: 0;
+        width: 100%;
         z-index: 9;
-        border-bottom:1px solid #ccc;
+        border-bottom: 1px solid #ccc;
         box-sizing: border-box;
-        
         i.logo {
             position: absolute;
-            font-size:48px;
-            top:14px;
-            left:20px;
-            color:$c;
+            font-size: 48px;
+            top: 14px;
+            left: 20px;
+            color: $c;
+        }
+        .logoname {
+            background: url(http://ov61aed6n.bkt.clouddn.com/17-8-26/48063096.jpg) no-repeat;
+            width: 200px;
+            height: 48px;
+            position: absolute;
+            left: 80px;
+            top: 18px;
+            background-size: auto 48px;
         }
         nav {
             text-align: right;
-            padding:0 20px;
-
+            padding: 0 20px;
             li {
-                display: inline-block; 
+                display: inline-block;
                 position: relative;
-                a { display: block;font:14px/40px arial;padding:20px;}
+                a {
+                    display: block;
+                    font: 14px/40px arial;
+                    padding: 20px 10px;
+                }
                 &:after {
                     width: 0px;
                     height: 4px;
@@ -72,10 +87,9 @@ dt {
                     pointer-events: none;
                 }
                 &:hover {
-                    color:$c;
+                    color: $c;
                     &:after {
                         width: 20px;
-
                     }
                 }
             }
@@ -84,23 +98,29 @@ dt {
     >.main {
         height: calc(100% - 180px);
         position: absolute;
-        top:80px;
-        padding:10px 0;
+        overflow: hidden;
+        top: 80px;
+        padding: 10px 0;
         background: #fff;
-        width:100%;
+        width: 100%;
     }
     >footer {
-        height: 80px;
-        // background: url(./assets/bg.jpg);
+        height: 80px; // background: url(./assets/bg.jpg);
         position: absolute;
         box-sizing: border-box;
-        bottom:0;
-        width:100%;
+        bottom: 0;
+        width: 100%;
         z-index: 9;
-        border-top:1px solid #ccc;
-        p { margin:0; padding:11px;font:10px/48px arial; color:#ccc;}
+        border-top: 1px solid #ccc;
+        p {
+            margin: 0;
+            padding: 11px;
+            font: 10px/48px arial;
+            color: #ccc;
+        }
     }
 }
+
 .index {
     overflow: hidden;
     width: 100%;
@@ -127,11 +147,11 @@ dt {
 
 .photos {
     padding: 10px 0 0 72px;
-    margin:0 20px;
+    margin: 0 20px;
     border-bottom: 1px solid #eee;
     position: relative;
     &:after {
-        width:0%;
+        width: 0%;
         height: 4px;
         content: '';
         background: #ccc;
@@ -140,30 +160,28 @@ dt {
     }
     &:hover {
         &:after {
-            width:100%;
+            width: 100%;
             transition: all .5s ease-in .01s;
         }
-
     }
-    
     li {
         display: inline-block;
         width: 72px;
         height: 72px;
-        border:1px solid #ccc;
-        font-size:0;
-        margin:0 10px 10px 0;
+        border: 1px solid #ccc;
+        font-size: 0;
+        margin: 0 10px 10px 0;
         &:first-child {
             position: absolute;
-            left:0px;
-            top:15px;
-            border:0;
+            left: 0px;
+            top: 15px;
+            border: 0;
             i {
-                font-size:48px;
-                width:48px;
+                font-size: 48px;
+                width: 48px;
                 height: 48px;
                 position: absolute;
-                color:#ccc;
+                color: #ccc;
             }
         }
         img {
@@ -178,12 +196,55 @@ dt {
 h1 {
     font: 16px/2 arial;
     padding: 20px 20px;
-
 }
 
+.hide {
+    display: none;
+}
+
+.pop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: rgba(#fff, .9);
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    .close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 10px;
+        z-index: 9;
+        width: 30px;
+        height: 30px;
+        color:rgba(#000,.5);
+        font:30px/30px iconfont;
+    }
+    .text {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        color: rgba(#000,.5);
+    }
+    .big {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+    }
+}
+article { padding: 20px; border-top:1px solid #eee; color:#666;font:14px/1.8 arial;}
 
 @keyframes panoramic {
-	to { background-position: 100% 0; }
+    to {
+        background-position: 100% 0;
+    }
 }
-
-

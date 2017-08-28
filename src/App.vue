@@ -2,6 +2,7 @@
   <div id="app">
     <header>
       <i class="logo iconfont icon-imagevectordefuben"></i>
+      <i class="logoname"></i>
 
       <nav>
         <li>
