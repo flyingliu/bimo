@@ -14,6 +14,9 @@
         <li>
           <router-link :to="{name:'about'}" class="btn">关于</router-link>
         </li>
+        <li>
+          <router-link :to="{name:'contact'}" class="btn">联系</router-link>
+        </li>
       </nav>
     </header>
     <router-view></router-view>

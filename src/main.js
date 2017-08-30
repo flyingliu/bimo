@@ -13,6 +13,10 @@ const router = new VueRouter({
         path: '/about',
         component: require('./components/about.vue'),
         name: 'about'
+    },{
+        path: '/contact',
+        component: require('./components/contact.vue'),
+        name: 'contact'
     }, {
         path: '/',
         component: require('./components/index.vue'),
