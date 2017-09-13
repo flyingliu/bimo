@@ -73,6 +73,38 @@ export default {
       img: 'http://ov61aed6n.bkt.clouddn.com/17-8-27/44515734.jpg',
       text: '锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦',
       thumb: "http://ov61aed6n.bkt.clouddn.com/17-8-27/71975634.jpg"
+    }, 
+    
+    {
+      type: '行书',
+      time: '2017.09.13',
+      img: 'http://ov61aed6n.bkt.clouddn.com/17-9-13/47551893.jpg',
+      text: '人间至味是清欢',
+      thumb: "http://ov61aed6n.bkt.clouddn.com/17-9-13/94732382.jpg"
+    }, {
+      type: '行书',
+      time: '2017.09.13',
+      img: 'http://ov61aed6n.bkt.clouddn.com/17-9-13/5263265.jpg',
+      text: '人间至味是清欢',
+      thumb: "http://ov61aed6n.bkt.clouddn.com/17-9-13/85016984.jpg"
+    }, {
+      type: '行书',
+      time: '2017.09.13',
+      img: 'http://ov61aed6n.bkt.clouddn.com/17-9-13/68610049.jpg',
+      text: '花好月圆',
+      thumb: "http://ov61aed6n.bkt.clouddn.com/17-9-13/14216953.jpg"
+    }, {
+      type: '行书',
+      time: '2017.09.13',
+      img: 'http://ov61aed6n.bkt.clouddn.com/17-9-13/70734569.jpg',
+      text: '天作之合',
+      thumb: "http://ov61aed6n.bkt.clouddn.com/17-9-13/76874427.jpg"
+    }, {
+      type: '行书',
+      time: '2017.09.13',
+      img: 'http://ov61aed6n.bkt.clouddn.com/17-9-13/89642836.jpg',
+      text: '人生得意须尽欢',
+      thumb: "http://ov61aed6n.bkt.clouddn.com/17-9-13/67535135.jpg"
     }
 
   ]
